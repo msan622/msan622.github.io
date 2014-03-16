@@ -1,0 +1,16 @@
+---
+layout: default
+title: Home
+---
+
+<h1 class="page-header">Announcements</h1>
+
+{% for post in site.posts %}
+<div class="panel panel-default">
+<div class="panel-heading"><h4 class="panel-title">{{ post.title }} &nbsp; <small>Posted {{ post.date | date_to_string }}</small></h4></div>
+<div class="panel-body">
+{{ post.content }}
+</div>
+</div>
+{% endfor %}
+
