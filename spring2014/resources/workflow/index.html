@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MSAN 622 Data Visualization</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/spring2014/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/spring2014/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="/spring2014/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/spring2014/css/navbar-footer.css">
+    <link rel="stylesheet" href="/spring2014/css/custom.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,900,300italic,400italic,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<!-- Beg: Page Wrap //-->
+<div id="wrap">
+
+<!-- Beg: Fixed Navbar //-->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#">MSAN 622</a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li >
+                    <a href="/spring2014/">
+                        <i class="fa fa-home"></i> Home
+                    </a>
+                </li>
+
+                <li >
+                    <a href="/spring2014/syllabus.html">
+                        <i class="fa fa-list"></i> Syllabus
+                    </a>
+                </li>
+
+                <li >
+                    <a href="/spring2014/schedule.html">
+                        <i class="fa fa-calendar"></i> Schedule
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="https://github.com/msan622/">
+                        GitHub&nbsp;&nbsp;<i class="fa fa-github-alt"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://usfca.instructure.com/courses/1217225">
+                        Canvas&nbsp;&nbsp;<i class="fa fa-external-link"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- End: Fixed Navbar //-->
+
+
+<!-- Beg: Page Container //-->
+<div class="container">
+<h1 class="page-header">Homework Workflow</h1>
+
+<p>This guide demonstrates how to use <a href="https://github.com/">GitHub</a> plus <a href="http://www.sourcetreeapp.com/">SourceTree</a> to submit your homework and keep your repository up-to-date.</p>
+
+<p>Specifically, we will use GitHub as our code repository (where we store our code) and SourceTree to interact with that repository. If you are already familiar with command-line <code>git</code>, you are welcome to use that instead.</p>
+
+<p>This is only required if you want to be able to update your repository from the master <code>msan622</code> repository whenever a homework description is updated. Otherwise, you can just use the free GitHub for Mac or Windows client. (This client tends to be easier to use.)</p>
+
+<h2>Setup</h2>
+
+<p>Make sure you have a <a href="https://github.com/">GitHub</a> account and <a href="http://www.sourcetreeapp.com/">SourceTree</a> installed. Both GitHub and SourceTree are free, and SourceTree is available for  both Mac and Windows.</p>
+
+<h2>Fork</h2>
+
+<p>Log in to your GitHub account and go to <a href="https://github.com/msan622/msan622">https://github.com/msan622/msan622</a> to get started. Click on the "Fork" button at the top of the page:</p>
+
+<p><img src="/spring2014/resources/workflow/github_fork.png" class="img-responsive img-thumbnail"></p>
+
+<p>Select your account if prompted. This should create a copy of the <code>msan622</code> repository within your own GitHub account.</p>
+
+<p><img src="/spring2014/resources/workflow/github_from.png" class="img-responsive img-thumbnail"></p>
+
+<p class="text-muted"><em>You should see your GitHub username instead of <code>sjengle</code> in the image above.</em></p>
+
+<h2>Clone</h2>
+
+<p>Clone the repository to your local computer. You can use the GitHub client for Mac or Windows if you prefer, or the <code>git</code> command-line tool. These steps will show you how to clone the repository using SourceTree.</p>
+
+<p>In GitHub, you need to copy the clone URL for your the <code>msan622</code> repository in your account. You are looking for something like this:</p>
+
+<p><img src="/spring2014/resources/workflow/github_clone.png" class="img-responsive img-thumbnail"></p>
+
+<p>Make sure the "HTTPS clone URL" is shown and copy it.</p>
+
+<p>In SourceTree, click the "Add Repository" button or select "New" from the file menu. Enter the clone URL and select where you would like to save the files on your local computer:</p>
+
+<p><img src="/spring2014/resources/workflow/sourcetree_clone.png" class="img-responsive img-thumbnail"></p>
+
+<p>Click the "Clone" button and wait the for operation to succeed. Once it does, you will see something like this:</p>
+
+<p><img src="/spring2014/resources/workflow/sourcetree_bookmarks.png" class="img-responsive img-thumbnail"></p>
+
+<p>If you browsed to the folder you selected earlier, you will also see all of the files have been downloaded to your computer:</p>
+
+<p><img src="/spring2014/resources/workflow/local_files.png" class="img-responsive img-thumbnail"></p>
+
+<p>If you use git properly, any changes you make to those files will be reflected in your GitHub account. And, should your harddrive fail or your files become corrupted, you will be able to redownload the latest version of your files from GitHub.</p>
+
+<h2>Push</h2>
+
+<p>Go ahead and modify the <code>README.md</code> file you downloaded with your name, address, and short bio and save.</p>
+
+<p>Note that these changes are <em>not</em> reflected in GitHub yet. This is because you must <strong>push</strong> your <em>local</em> changes from your laptop to the <em>remote</em> repository on GitHub.</p>
+
+<p>In SourceTree, open up your <code>msan622</code> repository/bookmark. Click on "Working Copy" from the window. You will see the <code>README.md</code> file in the section of the window titled "Files in the working tree":</p>
+
+<p><img src="/spring2014/resources/workflow/sourcetree_working.png" class="img-responsive img-thumbnail"></p>
+
+<p>Click that file and click "Stage File". This prepares the file to be committed. You can stage multiple files at once, and all of these will be included in the next commit.</p>
+
+<p>Click the "Commit" button. You will see a window like this:</p>
+
+<p><img src="/spring2014/resources/workflow/sourcetree_commit.png" class="img-responsive img-thumbnail"></p>
+
+<p>Briefly explain the changes you made in the "Commit message" and select "Push commits immediately to: origin". When ready, click the "Commit" button.</p>
+
+<p>Now, when you check your repository on GitHub, you should see all of the changes you made.</p>
+
+<h2>Pull</h2>
+
+<p>If you want to update your files because the original <code>msan622</code> repository was modified, you need to do a few things. This is the only operation that cannot be done using the GitHub for Mac or Windows client. You must use SourceTree or the <code>git</code> command-line tool for this operation.</p>
+
+<p>In SourceTree, click on the "Settings" button for your repository. You should see a window like this:</p>
+
+<p><img src="/spring2014/resources/workflow/sourcetree_settings1.png" class="img-responsive img-thumbnail"></p>
+
+<p>Right now, SourceTree only knows about your version of the <code>msan622</code> repository and not the master version you originally forked from. To change this, click the "Add" button to add a new remote repository:</p>
+
+<p><img src="/spring2014/resources/workflow/sourcetree_remote.png" class="img-responsive img-thumbnail"></p>
+
+<p>Name the new remote <code>upstream</code> and enter the clone URL for the <strong>original</strong> repository under the <code>msan622</code> organization. Click the "OK" button when done. You should now see both remotes listed:</p>
+
+<p><img src="/spring2014/resources/workflow/sourcetree_settings2.png" class="img-responsive img-thumbnail"></p>
+
+<p>It may take awhile to refresh, but eventually "upstream" will appear in the "remotes" heading on the sidebar. Select the "master" branch within that remote:</p>
+
+<p><img src="/spring2014/resources/workflow/sourcetree_upstream.png" class="img-responsive img-thumbnail"></p>
+
+<p>In this view, you will see changes in <code>upstream/master</code> that occurred after you forked the repository. Select the changes you want to merge into your repository, and select the "Merge" button.</p>
+
+<p><img src="/spring2014/resources/workflow/sourcetree_merge.png" class="img-responsive img-thumbnail"></p>
+
+<p>Make sure "Commit merge immediately" is selected and click the "OK" button. At this point, we have merged together the changes on your <em>local</em> repository. Now we must again push these changes to your <em>remote</em> repository. Click on the "Push" button:</p>
+
+<p><img src="/spring2014/resources/workflow/sourcetree_push.png" class="img-responsive img-thumbnail"></p>
+
+<p>Make sure you are pushing to the <code>origin</code> remote repository and <strong>not</strong> the <code>upstream</code> repository. Press "OK".</p>
+
+<p>At this point, you should have the changes in your local computer and in your remote repository on GitHub.</p>
+
+</div>
+<!-- End: Page Container //-->
+
+</div>
+<!-- End: Page Wrap //-->
+
+<!-- Beg: Page Footer //-->
+<div id="footer">
+    <div class="container text-center text-muted small">
+        <a href="http://analytics.usfca.edu/" class="text-muted">Master of Science in Analytics (MSAN)</a> &bullet;
+        <a href="http://usfca.edu/" class="text-muted">University of San Francisco</a> &bullet;
+        Copyright &copy; 2015
+    </div>
+</div>
+<!-- End: Page Footer //-->
+
+
+<script src="/spring2014/js/jquery.min.js"></script>
+<script src="/spring2014/js/bootstrap.min.js"></script>
+
+</body>
+</html>
